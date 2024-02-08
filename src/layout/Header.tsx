@@ -1,4 +1,5 @@
 import { styled } from '@mui/material'
+import { NavLink } from 'react-router-dom'
 
 export const Header = () => {
 	return (
@@ -6,9 +7,9 @@ export const Header = () => {
 			<h2>Arta.software</h2>
 			<nav>
 				<List>
-					<li>Blog</li>
-					<li>Counter</li>
-					<li>about</li>
+					<NavLink to={'/blogs'}>Blogs</NavLink>
+					<NavLink to={'/counter'}>Counter</NavLink>
+					<NavLink to={'/about'}>about</NavLink>
 				</List>
 			</nav>
 		</Container>
