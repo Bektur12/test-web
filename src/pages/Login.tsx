@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles'
 import img from '../assets/images/XMLID_1207_.png'
-import { TextField } from '@mui/material'
+import { Form } from '../components/Login/Form/Form'
 
 export const Login = () => {
 	return (
@@ -9,13 +9,7 @@ export const Login = () => {
 				<Image src={img} />
 			</LeftContainer>
 			<RightContainer>
-				<form>
-					<h3>
-						Добро пожаловать <br /> в ARTA SOFWARE !
-					</h3>
-					<TextField />
-					<TextField />
-				</form>
+				<Form />
 			</RightContainer>
 		</Container>
 	)
@@ -34,9 +28,10 @@ const LeftContainer = styled('div')({
 })
 
 const RightContainer = styled('div')({
-	fontFamily: 'Inter',
-	fontSize: '24px',
-	fontWeight: 600,
+	display: 'flex',
+	justifyContent: 'center',
+	alignItems: 'center',
+	width: '50%',
 })
 
 const Container = styled('div')({
