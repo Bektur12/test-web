@@ -1,7 +1,11 @@
-import './App.css'
+import { Layout } from './layout/Layout'
 
 function App() {
-	return <div>hello world</div>
+	return (
+		<div>
+			<Layout />
+		</div>
+	)
 }
 
 export default App
