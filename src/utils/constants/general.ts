@@ -9,3 +9,96 @@ export const LOGIN_INFO_KEY = '@LOADEX_LOGIN_INFO'
 export const SAVE_CREDENTIALS = 'SAVE_CREDENTIALS'
 
 export const BASE_URL = 'http://localhost:4000/'
+
+export const BLOGS = [
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+	{
+		id: '1',
+		title: 'hello world',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia iure quasi unde cum similique, necessitatibus eligendi nam! Molestiae culpa minima ipsam deleniti? Eligendi aut at maxime praesentium odio maiores?',
+	},
+]

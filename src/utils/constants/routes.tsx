@@ -1,3 +1,4 @@
+import { BlogPage } from '../../pages/BlogPage'
 import { RouteConfig } from '../../types/types'
 
 export const ROUTES = {
@@ -12,7 +13,7 @@ export const routesConfig: Record<string, RouteConfig[]> = {
 		},
 		{
 			path: '/blogs',
-			component: <div>BLOGS</div>,
+			component: <BlogPage />,
 		},
 		{
 			path: '/blogs/:id/edit',

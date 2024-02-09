@@ -12,28 +12,43 @@ export const Header = () => {
 
 	return (
 		<Container>
-			<h2>Arta.software</h2>
-			<nav>
+			<NavWrapper>
+				<h2>Arta.software</h2>
 				<List>
 					<NavLink to={'/blogs'}>Blogs</NavLink>
 					<NavLink to={'/counter'}>Counter</NavLink>
 					<NavLink to={'/about'}>about</NavLink>
 				</List>
-			</nav>
-			<button onClick={handleClickLogout}>logout</button>
+				<button
+					style={{ background: 'red' }}
+					onClick={handleClickLogout}
+				>
+					logout
+				</button>
+			</NavWrapper>
 		</Container>
 	)
 }
 
 const Container = styled('header')({
+	position: 'fixed',
+	top: '0',
+	left: '0',
+	right: '0',
+	width: '100%',
+	padding: 'inherit',
+})
+
+const NavWrapper = styled('nav')({
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'space-between',
 	width: '100%',
 	fontFamily: 'Inter',
 	color: '#FFFFFF',
+	height: '88px',
+	background: '#232830',
 })
-
 const List = styled('ul')({
 	display: 'flex',
 	listStyle: 'none',
