@@ -1,7 +1,15 @@
 import { styled } from '@mui/material'
 import { NavLink } from 'react-router-dom'
+import { authActions } from '../redux/slices/auth-slice'
+import { useAppDispatch } from '../hooks'
 
 export const Header = () => {
+	const dispatch = useAppDispatch()
+
+	const handleClickLogout = () => {
+		dispatch(authActions.logout())
+	}
+
 	return (
 		<Container>
 			<h2>Arta.software</h2>
@@ -12,6 +20,7 @@ export const Header = () => {
 					<NavLink to={'/about'}>about</NavLink>
 				</List>
 			</nav>
+			<button onClick={handleClickLogout}>logout</button>
 		</Container>
 	)
 }

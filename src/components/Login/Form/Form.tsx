@@ -6,11 +6,10 @@ import {
 	EMAIL_FORMAT,
 	VALIDATION_MESSAGE,
 } from '../../../utils/constants/general'
-import axios from 'axios'
-// import { handleCheckResponseUser } from '../../../utils/helpers/checkResponse'
-// import { useNavigate } from 'react-router-dom'
 import { authActions } from '../../../redux/slices/auth-slice'
 import { useAppDispatch } from '../../../hooks'
+import { handleCheckResponseUser } from '../../../utils/helpers/checkResponse'
+import { instance } from '../../../redux/axiosInstanse'
 
 type FormProps = {
 	email: string
@@ -24,28 +23,25 @@ export const Form = () => {
 	} = useForm<FormProps>()
 
 	const dispatch = useAppDispatch()
-	// const navigate = useNavigate()
 
 	const onSubmit = async (data: FormProps) => {
 		try {
-			// const newResponse = await handleCheckResponseUser(data.email)
+			const newResponse = await handleCheckResponseUser(data.email)
 
-			// if (newResponse?.length > 0) {
-			// 	return navigate('/main-page')
-			// }
+			if (newResponse?.length > 0) {
+				dispatch(authActions.setCredentials(data))
+				return
+			}
 
-			await axios.post('http://localhost:4000/users', {
+			await instance.post('/users', {
 				email: data.email,
 				password: data.password,
 				id: Math.random(),
 			})
-			console.log(data)
 
 			dispatch(authActions.setCredentials(data))
-			// navigate('/main-page')
-			// return createResponse.data
 		} catch (error) {
-			return null
+			throw new Error('Something wrong error')
 		}
 	}
 

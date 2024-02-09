@@ -5,9 +5,13 @@ import { RootState } from '../store'
 
 type initialStateProps = {
 	isAuthorized: boolean
+	id: string
+	email: string
 }
 const initialState: initialStateProps = {
 	isAuthorized: false,
+	id: '',
+	email: '',
 }
 export const logout = createAsyncThunk(
 	'auth/logout',
@@ -22,8 +26,9 @@ export const authSlice = createSlice({
 	initialState,
 	reducers: {
 		setCredentials(state, { payload }) {
-			console.log(payload, 'beka dev')
+			state.email = payload.email
 			state.isAuthorized = true
+			state.id = payload.id
 		},
 		logout: (state) => {
 			state.isAuthorized = false

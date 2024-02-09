@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import axios from 'axios'
+import { instance } from '../../redux/axiosInstanse'
 
-export const handleCheckResponseUser = async (email: string) => {
-	const checkResponse = await axios.get(
-		`http://localhost:4000/users?email=${email}`,
-	)
+export const handleCheckResponseUser = async (id: string) => {
+	const checkResponse = await instance.get(`users?email=${id}`)
 	return checkResponse.data
 }
