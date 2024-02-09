@@ -13,3 +13,9 @@ export interface RouteConfig {
 	path: string
 	component: JSX.Element
 }
+
+export interface IUserInfo {
+	email: string
+	password: string
+	id: string
+}

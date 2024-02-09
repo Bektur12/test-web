@@ -8,7 +8,7 @@ import { Login } from '../pages/Login'
 
 const Loading = 'Loading...'
 
-export const AppRoutes = ({ isAuthorized = false }: Authorized) => {
+export const AppRoutes = ({ isAuthorized }: Authorized) => {
 	return (
 		<Routes>
 			<Route
