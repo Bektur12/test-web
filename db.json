@@ -1,0 +1,17 @@
+{
+	"users": [
+		{
+			"email": ""
+		},
+		{
+			"id": 0.1067847086716378,
+			"email": "kanybekovbektur22@gmail.com",
+			"password": "random"
+		},
+		{
+			"id": 1,
+			"email": "dispatcher@bektur.com",
+			"password": "random"
+		}
+	]
+}

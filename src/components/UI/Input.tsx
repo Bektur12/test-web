@@ -17,7 +17,6 @@ export const Input = React.forwardRef<HTMLInputElement, Props>(
 		{
 			label,
 			htmlFor,
-			errorColor,
 			error,
 			id,
 			textError,
@@ -38,8 +37,7 @@ export const Input = React.forwardRef<HTMLInputElement, Props>(
 					ref={ref}
 					{...props}
 				/>
-				<ErrorText errorColor={errorColor as string}>
-					{textError && <p>Error</p>}
+				<ErrorText>
 					<span>{textError}</span>
 				</ErrorText>
 			</FormControl>
@@ -58,8 +56,8 @@ const InputStyled = styled(InputBase)<{ borderColor?: boolean }>(() => ({
 	},
 }))
 
-const ErrorText = styled('span')<{ errorColor: string }>(({ errorColor }) => ({
-	color: errorColor || 'red',
+const ErrorText = styled('span')(() => ({
+	color: 'red',
 	fontSize: '12px',
 	position: 'absolute',
 	top: '100%',

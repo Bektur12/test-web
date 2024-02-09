@@ -7,6 +7,10 @@ export const ROUTES = {
 export const routesConfig: Record<string, RouteConfig[]> = {
 	USER: [
 		{
+			path: '/main-page',
+			component: <div>MAIN</div>,
+		},
+		{
 			path: '/blogs',
 			component: <div>BLOGS</div>,
 		},
