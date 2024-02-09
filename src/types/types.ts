@@ -19,3 +19,13 @@ export interface IUserInfo {
 	password: string
 	id: string
 }
+
+export type BlogItem = {
+	id: string
+	title: string
+	text: string
+}
+
+export type Blogs = {
+	blogs: BlogItem[]
+}

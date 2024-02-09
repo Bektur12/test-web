@@ -1,4 +1,3 @@
-// src/store.js
 import { configureStore } from '@reduxjs/toolkit'
 import persistedReducer from './persistConfig'
 import {

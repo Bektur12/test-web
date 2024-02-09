@@ -36,7 +36,8 @@ const Container = styled('header')({
 	left: '0',
 	right: '0',
 	width: '100%',
-	padding: 'inherit',
+	padding: '30px 100px',
+	background: 'blue',
 })
 
 const NavWrapper = styled('nav')({
@@ -46,8 +47,6 @@ const NavWrapper = styled('nav')({
 	width: '100%',
 	fontFamily: 'Inter',
 	color: '#FFFFFF',
-	height: '88px',
-	background: '#232830',
 })
 const List = styled('ul')({
 	display: 'flex',

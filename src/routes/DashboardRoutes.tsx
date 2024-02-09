@@ -8,6 +8,7 @@ export const DashboardRoutes = () => {
 		<Routes>
 			{routesConfig['USER'].map((route: RouteConfig) => (
 				<Route
+					key={route.path}
 					path={route.path}
 					element={
 						<Suspense fallback={<div>loading...</div>}>
