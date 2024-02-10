@@ -37,9 +37,12 @@ type Data = {
 	prev: null
 }
 
-export type InitialState = {
+export type IsLoading = {
+	isLoading: boolean
+}
+
+export type InitialState = IsLoading & {
 	blogs: Data
-	isLoading?: boolean
 }
 
 type Navigate = {
@@ -59,4 +62,17 @@ export type LoginUserProps = Navigate & {
 
 export type Params = {
 	params?: string
+}
+
+export type PostItem = {
+	userId: string
+	id: string
+	title: string
+	body: string
+}
+
+export type Posts = { posts: PostItem[] }
+
+export type InitialStatePosts = IsLoading & {
+	posts: PostItem[]
 }

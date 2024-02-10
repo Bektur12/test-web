@@ -14,11 +14,11 @@ export const Header = () => {
 	return (
 		<Container>
 			<NavWrapper>
-				<h2>Arta.software</h2>
+				<h2>Arta Software</h2>
 				<List>
 					<NavLink to={'/blogs'}>blogs</NavLink>
 					<NavLink to={'/counter'}>counter</NavLink>
-					<NavLink to={'/list'}>List</NavLink>
+					<NavLink to={'/posts'}>list</NavLink>
 				</List>
 				<Button onClick={handleClickLogout}>logout</Button>
 			</NavWrapper>
@@ -32,7 +32,7 @@ const Container = styled('header')({
 	left: '0',
 	right: '0',
 	width: '100%',
-	padding: '20px 100px',
+	padding: '20px 40px',
 	background: '#b4bbb5',
 })
 
@@ -54,8 +54,9 @@ const List = styled('ul')({
 		cursor: 'pointer',
 	},
 	a: {
-		// textDecoration: 'none',
 		fontWight: 500,
 		color: '#FFFFFF',
+		fontWeight: 'bold',
+		textTransform: 'capitalize',
 	},
 })
