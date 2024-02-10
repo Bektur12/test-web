@@ -3,13 +3,24 @@ import { BlogList } from '../components/Blogs/BlogList'
 import { Pagination } from '../components/UI/Pagination/Pagination'
 import { Button } from '../components/UI/Button/Button'
 import { useNavigate } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../hooks'
+import { useEffect } from 'react'
+import { getBlogs } from '../redux/actions/blogActions'
+import { SpinnerContainer } from '../components/UI/Spinner/SpinnerContainer'
+import { Spinner } from '../components/UI/Spinner/Spinner'
 
 export const BlogPage = () => {
+	const { blogs = [], isLoading } = useAppSelector((state) => state.blogs)
+
+	const dispatch = useAppDispatch()
+
+	useEffect(() => {
+		dispatch(getBlogs())
+	}, [dispatch])
+
 	const navigate = useNavigate()
 
-	const handleClickNavigate = () => {
-		navigate('/blogs/create')
-	}
+	const handleClickNavigate = () => navigate('/blogs/create')
 
 	return (
 		<BlogsWrapper>
@@ -17,7 +28,13 @@ export const BlogPage = () => {
 				<Button onClick={handleClickNavigate}>Создать</Button>
 			</TopPart>
 			<InnerContainer>
-				<BlogList />
+				{isLoading ? (
+					<SpinnerContainer>
+						<Spinner />
+					</SpinnerContainer>
+				) : (
+					<BlogList blogs={blogs} />
+				)}
 			</InnerContainer>
 			<Pagination />
 		</BlogsWrapper>

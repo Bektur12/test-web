@@ -1,29 +1,15 @@
 import { styled } from '@mui/material/styles'
 import { Card } from './Card/Card'
-import { useAppDispatch, useAppSelector } from '../../hooks'
-import { getBlogs } from '../../redux/actions/blogActions'
-import { useEffect } from 'react'
-import { SpinnerContainer } from '../UI/Spinner/SpinnerContainer'
-import { Spinner } from '../UI/Spinner/Spinner'
+import { BlogItem } from '../../types/types'
 
-export const BlogList = () => {
-	const { blogs = [], isLoading } = useAppSelector((state) => state.blogs)
+type Blog = { blogs: BlogItem[] }
 
-	const dispatch = useAppDispatch()
-
-	useEffect(() => {
-		dispatch(getBlogs())
-	}, [dispatch])
-
+export const BlogList = ({ blogs }: Blog) => {
 	return (
 		<List>
-			{isLoading ? (
-				<SpinnerContainer>
-					<Spinner />
-				</SpinnerContainer>
-			) : (
-				blogs?.map((item) => <Card {...item} />)
-			)}
+			{blogs?.map((item) => (
+				<Card {...item} />
+			))}
 		</List>
 	)
 }

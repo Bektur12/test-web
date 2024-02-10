@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles'
 import { useNavigate } from 'react-router-dom'
 
-type CardProps = {
+export type CardProps = {
 	id: string
 	title: string
 	text: string
