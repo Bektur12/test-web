@@ -4,6 +4,7 @@ import { styled } from '@mui/material'
 import { Button } from '../components/UI/Button/Button'
 import { useAppDispatch } from '../hooks'
 import { postBlogRequest } from '../redux/actions/blogActions'
+import { useNavigate } from 'react-router-dom'
 
 type Form = {
 	title: string
@@ -12,9 +13,10 @@ type Form = {
 export const CreateBlogPage = () => {
 	const methods = useForm<Form>()
 	const dispatch = useAppDispatch()
+	const navigate = useNavigate()
 
 	const handleSaveClick = (data: Form) => {
-		dispatch(postBlogRequest(data))
+		dispatch(postBlogRequest({ data, navigate }))
 	}
 
 	return (

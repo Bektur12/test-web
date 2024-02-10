@@ -3,9 +3,12 @@ import { Card } from './Card/Card'
 import { useAppDispatch, useAppSelector } from '../../hooks'
 import { getBlogs } from '../../redux/actions/blogActions'
 import { useEffect } from 'react'
+import { SpinnerContainer } from '../UI/Spinner/SpinnerContainer'
+import { Spinner } from '../UI/Spinner/Spinner'
 
 export const BlogList = () => {
-	const { blogs = [] } = useAppSelector((state) => state.blogs)
+	const { blogs = [], isLoading } = useAppSelector((state) => state.blogs)
+
 	const dispatch = useAppDispatch()
 
 	useEffect(() => {
@@ -14,9 +17,13 @@ export const BlogList = () => {
 
 	return (
 		<List>
-			{blogs.map((item) => {
-				return <Card {...item} />
-			})}
+			{isLoading ? (
+				<SpinnerContainer>
+					<Spinner />
+				</SpinnerContainer>
+			) : (
+				blogs?.map((item) => <Card {...item} />)
+			)}
 		</List>
 	)
 }
