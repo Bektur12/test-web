@@ -1,5 +1,6 @@
 import { BlogPage } from '../../pages/BlogPage'
 import { BlogViewPage } from '../../pages/BlogViewPage'
+import Counter from '../../pages/CounterPage'
 import { CreateBlogPage } from '../../pages/CreateBlogPage'
 import { RouteConfig } from '../../types/types'
 
@@ -10,8 +11,8 @@ export const ROUTES = {
 export const routesConfig: Record<string, RouteConfig[]> = {
 	USER: [
 		{
-			path: '/main-page',
-			component: <div>MAIN</div>,
+			path: '/counter',
+			component: <Counter />,
 		},
 		{
 			path: '/blogs',
