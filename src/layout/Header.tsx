@@ -18,7 +18,7 @@ export const Header = () => {
 				<List>
 					<NavLink to={'/blogs'}>blogs</NavLink>
 					<NavLink to={'/counter'}>counter</NavLink>
-					<NavLink to={'/about'}>about</NavLink>
+					<NavLink to={'/list'}>List</NavLink>
 				</List>
 				<Button onClick={handleClickLogout}>logout</Button>
 			</NavWrapper>
