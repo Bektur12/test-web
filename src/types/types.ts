@@ -42,14 +42,19 @@ export type InitialState = {
 	isLoading?: boolean
 }
 
-export type PostBlog = {
+type Navigate = {
 	navigate: NavigateFunction
+}
+export type PostBlog = Navigate & {
 	data: Omit<BlogItem, 'id'>
 }
 
 export type DeleteBlog = {
-	navigate?: NavigateFunction
 	id: string
+}
+
+export type LoginUserProps = Navigate & {
+	data: Omit<IUserInfo, 'id'>
 }
 
 export type Params = {
