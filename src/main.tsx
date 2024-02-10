@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store.ts'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
+import { Snackbar } from './components/UI/Snackbar/SnackBar.tsx'
 
 const persistor = persistStore(store)
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 		<BrowserRouter>
 			<Provider store={store}>
 				<PersistGate persistor={persistor}>
+					<Snackbar />
 					<App />
 				</PersistGate>
 			</Provider>

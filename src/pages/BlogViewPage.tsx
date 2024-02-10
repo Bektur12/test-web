@@ -7,22 +7,19 @@ import { styled } from '@mui/material/styles'
 import { Button } from '../components/UI/Button/Button'
 import { FormProvider, useForm } from 'react-hook-form'
 import { EditForm } from '../components/Blogs/Form/EditForm'
+import { useSnackBar } from '../hooks/useSnackBar'
+import { BLOGS_DEFAULT_VALUES } from '../utils/constants/general'
 
 export const BlogViewPage = () => {
 	const methods = useForm<BlogItem>()
 	const { id } = useParams()
-	const dispatch = useAppDispatch()
 
-	const [blog, setBlog] = useState<BlogItem>({ title: '', text: '', id: '' })
+	const dispatch = useAppDispatch()
+	const { notify } = useSnackBar()
 	const navigate = useNavigate()
 
+	const [blog, setBlog] = useState<BlogItem>(BLOGS_DEFAULT_VALUES)
 	const [isEditing, setIsEditing] = useState(false)
-
-	useEffect(() => {
-		dispatch(getBlogById(id as string))
-			.unwrap()
-			.then((result) => setBlog({ ...result.data }))
-	}, [dispatch, id])
 
 	const handleEditButtonClick = () => {
 		setIsEditing(true)
@@ -31,8 +28,17 @@ export const BlogViewPage = () => {
 	}
 
 	const handleDeleteClick = () => {
-		dispatch(deleteBlogRequest({ id: id as string, navigate }))
+		dispatch(deleteBlogRequest({ id: id as string })).then(() => {
+			navigate('/blogs')
+			notify({ title: 'Успешно удален', type: 'success' })
+		})
 	}
+
+	useEffect(() => {
+		dispatch(getBlogById(id as string))
+			.unwrap()
+			.then((result) => setBlog({ ...result.data }))
+	}, [dispatch, id])
 
 	return (
 		<FormProvider {...methods}>
@@ -42,6 +48,7 @@ export const BlogViewPage = () => {
 						methods={methods}
 						editId={id as string}
 						setIsEditing={setIsEditing}
+						setBlog={setBlog}
 					/>
 				) : (
 					<>

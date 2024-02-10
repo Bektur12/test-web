@@ -10,6 +10,7 @@ import { authActions } from '../../../redux/slices/auth-slice'
 import { useAppDispatch } from '../../../hooks'
 import { handleCheckResponseUser } from '../../../utils/helpers/checkResponse'
 import { instance } from '../../../redux/axiosInstanse'
+import { useSnackBar } from '../../../hooks/useSnackBar'
 
 type FormProps = {
 	email: string
@@ -23,6 +24,7 @@ export const Form = () => {
 	} = useForm<FormProps>()
 
 	const dispatch = useAppDispatch()
+	const { notify } = useSnackBar()
 
 	const onSubmit = async (data: FormProps) => {
 		try {
@@ -38,7 +40,7 @@ export const Form = () => {
 				password: data.password,
 				id: Math.random(),
 			})
-
+			notify({ title: 'URAAA', type: 'success' })
 			dispatch(authActions.setCredentials(data))
 		} catch (error) {
 			throw new Error('Something wrong error')

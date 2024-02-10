@@ -27,8 +27,18 @@ export type BlogItem = {
 	text: string
 }
 
-export type Blogs = {
-	blogs: BlogItem[]
+type Data = {
+	data: BlogItem[]
+	first: 1
+	items: 25
+	last: 3
+	next: 2
+	pages: 3
+	prev: null
+}
+
+export type InitialState = {
+	blogs: Data
 	isLoading?: boolean
 }
 
@@ -38,6 +48,10 @@ export type PostBlog = {
 }
 
 export type DeleteBlog = {
-	navigate: NavigateFunction
+	navigate?: NavigateFunction
 	id: string
+}
+
+export type Params = {
+	params?: string
 }

@@ -4,7 +4,7 @@ import { BlogItem } from '../../types/types'
 
 type Blog = { blogs: BlogItem[] }
 
-export const BlogList = ({ blogs }: Blog) => {
+export const BlogList = ({ blogs = [] }: Blog) => {
 	return (
 		<List>
 			{blogs?.map((item) => (
