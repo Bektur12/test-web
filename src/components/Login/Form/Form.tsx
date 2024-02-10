@@ -10,7 +10,7 @@ import { authActions } from '../../../redux/slices/auth-slice'
 import { useAppDispatch } from '../../../hooks'
 import { handleCheckResponseUser } from '../../../utils/helpers/checkResponse'
 import { instance } from '../../../redux/axiosInstanse'
-import { useSnackbar } from '../../../hooks/useSnackBar'
+import { useSnackBar } from '../../../hooks/useSnackBar'
 
 type FormProps = {
 	email: string
@@ -24,7 +24,7 @@ export const Form = () => {
 	} = useForm<FormProps>()
 
 	const dispatch = useAppDispatch()
-	const { notify } = useSnackbar()
+	const { notify } = useSnackBar()
 
 	const onSubmit = async (data: FormProps) => {
 		try {

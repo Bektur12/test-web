@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { styled } from '@mui/material/styles'
 import { toast, ToastOptions } from 'react-toastify'
-import CloseIcon from '../assets/icons/close-modal.svg'
-import SuccessIcon from '../assets/icons/success.svg'
-import ErrorIcon from '../assets/icons/error.svg'
-import InfoIcon from '../assets/icons/info.svg'
+import CloseIcon from '../assets/icons/close-modal.svg?react'
+import SuccessIcon from '../assets/icons/success.svg?react'
+import ErrorIcon from '../assets/icons/error.svg?react'
+import InfoIcon from '../assets/icons/info.svg?react'
 
 interface SnackbarOptions extends ToastOptions {
 	position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
@@ -16,7 +16,7 @@ interface SnackbarProps {
 	options?: SnackbarOptions
 }
 
-export const useSnackbar = () => {
+export const useSnackBar = () => {
 	const notify = ({ type, title, options }: SnackbarProps) => {
 		let iconComponent: JSX.Element | null = null
 		switch (type) {
