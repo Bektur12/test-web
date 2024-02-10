@@ -29,7 +29,6 @@ export const BlogPage = () => {
 	}, [dispatch, newPages])
 
 	const handleNextPage = (newPage: number) => {
-		console.log(newPage, 'hello')
 		if (newPage !== newPages) {
 			setParams({ page: String(newPage) })
 		}

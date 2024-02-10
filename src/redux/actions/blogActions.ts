@@ -2,13 +2,15 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { instance } from '../axiosInstanse'
 import { BlogItem, DeleteBlog, Params, PostBlog } from '../../types/types'
+import { wait } from '../../utils/helpers/wait.helper'
 
 export const getBlogs = createAsyncThunk(
 	'blogs/getBlogs',
 	async ({ params }: Params) => {
 		try {
 			const response = await instance.get(`blogs?${params}`)
-			return response.data
+			const newResponse = await wait(500, response)
+			return newResponse.data
 		} catch (error: any) {
 			throw new Error(error)
 		}
