@@ -9,59 +9,136 @@
       "password": "random"
     },
     {
-      "id": 1,
+      "id": "1",
       "email": "dispatcher@bektur.com",
       "password": "random"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "280f",
+      "text": "21312132132",
+      "title": "BBBBB"
     },
     {
-      "id": 0.3666563214373324,
-      "email": "kanybekovbektur321222@gmail.com",
-      "password": "32312312132"
+      "id": "d138",
+      "text": "32132123321321312213",
+      "title": "bbb"
     },
     {
-      "id": 0.800196245844391,
-      "email": "kanybeko32132vbektur22@gmail.com",
-      "password": "321321321123132123"
+      "id": "a9ec",
+      "title": "312132",
+      "text": "1321321321312"
     },
     {
-      "id": 0.3775763889129331,
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "321123"
+      "id": "bc57",
+      "title": "131231",
+      "text": "23131321321qrewewqrewqrewqrewqrewqrewqrewqrewqrewqrewqrewqrewq"
     },
     {
-      "id": 0.0795395982106335,
-      "email": "manager@loadex.net",
-      "password": "321132321"
+      "id": "ce6f",
+      "title": "21321",
+      "text": "32132132132"
     },
     {
-      "id": 0.789725207380515,
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "1231332"
+      "id": "66c5",
+      "title": "fdsafdsafdsafd",
+      "text": "HELLOO WORLD"
     },
     {
-      "id": 0.6167522532115877,
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "1231332"
+      "id": "9261",
+      "title": "321312312",
+      "text": "321312312321123"
     },
     {
-      "id": 0.37907090352921124,
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "1231332"
+      "id": "2389",
+      "title": "132312",
+      "text": "32113213223123123123"
     },
     {
-      "id": 0.12583230290197256,
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "1231332"
+      "id": "86b1",
+      "title": "32312321",
+      "text": "231312321"
     },
     {
-      "id": 0.12923531241893826,
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "1231332"
+      "id": "14ed",
+      "title": "321312",
+      "text": "321312321132"
     },
     {
-      "id": 0.30524315057383067,
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "random"
+      "id": "fb3e",
+      "title": "312321",
+      "text": "132123123"
+    },
+    {
+      "id": "ed77",
+      "title": "321123",
+      "text": "123123123123"
+    },
+    {
+      "id": "980d",
+      "title": "BKKKK",
+      "text": "BKKK"
+    },
+    {
+      "id": "8897",
+      "title": "SALLLLLAMMM",
+      "text": "SALLLAAMMMM"
+    },
+    {
+      "id": "c383",
+      "title": "fdsafdsa",
+      "text": "fdsafdsa"
+    },
+    {
+      "id": "432f",
+      "title": "fdsafdsa",
+      "text": "afdsafdsafdsa"
+    },
+    {
+      "id": "0443",
+      "title": "312312",
+      "text": "312312"
+    },
+    {
+      "id": "3f15",
+      "title": "312312",
+      "text": "312312132"
+    },
+    {
+      "id": "877f",
+      "title": "312132",
+      "text": "31213212"
+    },
+    {
+      "id": "4836",
+      "title": "312312312",
+      "text": "31321312312"
+    },
+    {
+      "id": "bc2a",
+      "title": "321312312",
+      "text": "312132132132"
+    },
+    {
+      "id": "dd0a",
+      "title": "3213123123",
+      "text": "12312312312132"
+    },
+    {
+      "id": "4e5f",
+      "title": "3213123213",
+      "text": "21321321312"
+    },
+    {
+      "id": "a31f",
+      "title": "321321312",
+      "text": "32131232131"
+    },
+    {
+      "id": "2897",
+      "title": "321321312312",
+      "text": "312312132132321132"
     }
   ]
 }

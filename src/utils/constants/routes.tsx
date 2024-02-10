@@ -1,3 +1,6 @@
+import { BlogPage } from '../../pages/BlogPage'
+import { BlogViewPage } from '../../pages/BlogViewPage'
+import { CreateBlogPage } from '../../pages/CreateBlogPage'
 import { RouteConfig } from '../../types/types'
 
 export const ROUTES = {
@@ -12,7 +15,11 @@ export const routesConfig: Record<string, RouteConfig[]> = {
 		},
 		{
 			path: '/blogs',
-			component: <div>BLOGS</div>,
+			component: <BlogPage />,
+		},
+		{
+			path: '/blogs/:id/view',
+			component: <BlogViewPage />,
 		},
 		{
 			path: '/blogs/:id/edit',
@@ -20,7 +27,7 @@ export const routesConfig: Record<string, RouteConfig[]> = {
 		},
 		{
 			path: '/blogs/create',
-			component: <div>create</div>,
+			component: <CreateBlogPage />,
 		},
 	],
 }

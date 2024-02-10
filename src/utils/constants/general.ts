@@ -9,3 +9,5 @@ export const LOGIN_INFO_KEY = '@LOADEX_LOGIN_INFO'
 export const SAVE_CREDENTIALS = 'SAVE_CREDENTIALS'
 
 export const BASE_URL = 'http://localhost:4000/'
+
+export const BLOGS_DEFAULT_VALUES = { title: '', text: '', id: '' }
