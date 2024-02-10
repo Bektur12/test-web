@@ -1,6 +1,5 @@
-import { instance } from '../../redux/axiosInstanse'
+import { IUserInfo } from '../../types/types'
 
-export const handleCheckResponseUser = async (id: string) => {
-	const checkResponse = await instance.get(`users?email=${id}`)
-	return checkResponse.data
+export const userExists = (data: IUserInfo[], email: string) => {
+	return data.some((item) => item.email === email)
 }

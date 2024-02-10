@@ -8,9 +8,10 @@ import {
 } from '../../../utils/constants/general'
 import { authActions } from '../../../redux/slices/auth-slice'
 import { useAppDispatch } from '../../../hooks'
-import { handleCheckResponseUser } from '../../../utils/helpers/checkResponse'
+import { userExists } from '../../../utils/helpers/checkResponse'
+import { loginUser } from '../../../redux/actions/loginActions'
+import { useNavigate } from 'react-router'
 import { instance } from '../../../redux/axiosInstanse'
-import { useSnackBar } from '../../../hooks/useSnackBar'
 
 type FormProps = {
 	email: string
@@ -24,26 +25,18 @@ export const Form = () => {
 	} = useForm<FormProps>()
 
 	const dispatch = useAppDispatch()
-	const { notify } = useSnackBar()
+	const navigate = useNavigate()
 
 	const onSubmit = async (data: FormProps) => {
 		try {
-			const newResponse = await handleCheckResponseUser(data.email)
-
-			if (newResponse?.length > 0) {
+			const response = await instance.get(`users`)
+			if (userExists(response.data, data.email)) {
 				dispatch(authActions.setCredentials(data))
-				return
+			} else {
+				dispatch(loginUser({ data, navigate }))
 			}
-
-			await instance.post('/users', {
-				email: data.email,
-				password: data.password,
-				id: Math.random(),
-			})
-			notify({ title: 'URAAA', type: 'success' })
-			dispatch(authActions.setCredentials(data))
 		} catch (error) {
-			throw new Error('Something wrong error')
+			throw new Error('Что-то пошло не так')
 		}
 	}
 
