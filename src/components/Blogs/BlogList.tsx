@@ -1,6 +1,6 @@
-import { styled } from '@mui/material/styles'
 import { Card } from './Card/Card'
 import { BlogItem } from '../../types/types'
+import { List } from '../Posts'
 
 type Blog = { blogs: BlogItem[] }
 
@@ -13,12 +13,3 @@ export const BlogList = ({ blogs = [] }: Blog) => {
 		</List>
 	)
 }
-
-const List = styled('div')({
-	display: 'flex',
-	flexWrap: 'wrap',
-	gap: '10px',
-	width: '100%',
-	justifyContent: 'center',
-	overflow: 'scroll',
-})
