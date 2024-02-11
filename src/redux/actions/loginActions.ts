@@ -8,7 +8,7 @@ export const loginUser = createAsyncThunk(
 	async ({ navigate, data }: LoginUserProps, { dispatch }) => {
 		try {
 			const response = await instance.post('users', data)
-			dispatch(authActions.setCredentials(data))
+			dispatch(authActions.setCredentials())
 			navigate('/blogs')
 			return response
 		} catch (error) {
