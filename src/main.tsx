@@ -12,13 +12,13 @@ import { Snackbar } from './components/UI/Snackbar/SnackBar.tsx'
 const persistor = persistStore(store)
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<Provider store={store}>
-				<PersistGate persistor={persistor}>
-					<Snackbar />
+		<Provider store={store}>
+			<PersistGate persistor={persistor}>
+				<Snackbar />
+				<BrowserRouter>
 					<App />
-				</PersistGate>
-			</Provider>
-		</BrowserRouter>
+				</BrowserRouter>
+			</PersistGate>
+		</Provider>
 	</React.StrictMode>,
 )
