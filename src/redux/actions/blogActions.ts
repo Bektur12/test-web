@@ -3,6 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { instance } from '../axiosInstanse'
 import { BlogItem, DeleteBlog, Params, PostBlog } from '../../types/types'
 import { wait } from '../../utils/helpers/wait.helper'
+import { AxiosError } from 'axios'
 
 export const getBlogs = createAsyncThunk(
 	'blogs/getBlogs',
@@ -11,8 +12,9 @@ export const getBlogs = createAsyncThunk(
 			const response = await instance.get(`blogs?${params}`)
 			const newResponse = await wait(500, response)
 			return newResponse.data
-		} catch (error: any) {
-			throw new Error(error)
+		} catch (err) {
+			const error = err as AxiosError<Error>
+			throw new Error(error.response?.data.message)
 		}
 	},
 )
@@ -23,8 +25,9 @@ export const getBlogById = createAsyncThunk(
 		try {
 			const response = await instance.get(`blogs/${id}`)
 			return response
-		} catch (error: any) {
-			throw new Error(error)
+		} catch (err) {
+			const error = err as AxiosError<Error>
+			throw new Error(error.response?.data.message)
 		}
 	},
 )
@@ -41,8 +44,9 @@ export const postBlogRequest = createAsyncThunk(
 			navigate(-1)
 			notify({ title: 'Успешно создан', type: 'success' })
 			return response
-		} catch (error: any) {
-			throw new Error(error)
+		} catch (err) {
+			const error = err as AxiosError<Error>
+			throw new Error(error.response?.data.message)
 		}
 	},
 )
@@ -53,8 +57,9 @@ export const editBlogRequest = createAsyncThunk(
 		try {
 			const response = await instance.put(`blogs/${data.id}`, data)
 			return response
-		} catch (error: any) {
-			throw new Error(error)
+		} catch (err) {
+			const error = err as AxiosError<Error>
+			throw new Error(error.response?.data.message)
 		}
 	},
 )
@@ -66,8 +71,9 @@ export const deleteBlogRequest = createAsyncThunk(
 			const response = await instance.delete(`blogs/${data.id}`)
 			dispatch(getBlogs({}))
 			return response
-		} catch (error: any) {
-			throw new Error(error)
+		} catch (err) {
+			const error = err as AxiosError<Error>
+			throw new Error(error.response?.data.message)
 		}
 	},
 )

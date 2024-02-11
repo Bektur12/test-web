@@ -5,6 +5,7 @@ import { InitialStatePosts } from '../../types/types'
 const initialState: InitialStatePosts = {
 	posts: [],
 	isLoading: false,
+	isError: false,
 }
 const postsSlice = createSlice({
 	name: 'postsSlice',
@@ -18,6 +19,9 @@ const postsSlice = createSlice({
 			})
 			.addCase(getPosts.pending, (state) => {
 				state.isLoading = true
+			})
+			.addCase(getPosts.rejected, (state) => {
+				state.isError = true
 			})
 	},
 })

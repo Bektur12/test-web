@@ -1,10 +1,11 @@
 {
   "users": [
     {
-      "email": ""
+      "email": "",
+      "id": "b11a"
     },
     {
-      "id": 0.1067847086716378,
+      "id": "0.1067847086716378",
       "email": "kanybekovbektur22@gmail.com",
       "password": "random"
     },
@@ -42,6 +43,11 @@
       "id": "ff37",
       "email": "fdsafdsadfsa@gmail.com",
       "password": "321312123"
+    },
+    {
+      "id": "e890",
+      "email": "kanybekovbektur22@gmail.com",
+      "password": "fdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsa"
     }
   ],
   "blogs": [
@@ -49,21 +55,6 @@
       "id": "a9ec",
       "text": "1321321321312авыфавыфавыф",
       "title": "312132"
-    },
-    {
-      "id": "bc57",
-      "title": "131231",
-      "text": "23131321321qrewewqrewqrewqrewqrewqrewqrewqrewqrewqrewqrewqrewq"
-    },
-    {
-      "id": "ce6f",
-      "title": "21321",
-      "text": "32132132132"
-    },
-    {
-      "id": "66c5",
-      "title": "fdsafdsafdsafd",
-      "text": "HELLOO WORLD"
     },
     {
       "id": "9261",
@@ -94,26 +85,6 @@
       "id": "ed77",
       "title": "321123",
       "text": "123123123123"
-    },
-    {
-      "id": "980d",
-      "title": "BKKKK",
-      "text": "BKKK"
-    },
-    {
-      "id": "8897",
-      "title": "SALLLLLAMMM",
-      "text": "SALLLAAMMMM"
-    },
-    {
-      "id": "c383",
-      "title": "fdsafdsa",
-      "text": "fdsafdsa"
-    },
-    {
-      "id": "432f",
-      "title": "fdsafdsa",
-      "text": "afdsafdsafdsa"
     },
     {
       "id": "0443",
@@ -159,6 +130,16 @@
       "id": "2897",
       "title": "321321312312",
       "text": "312312132132321132"
+    },
+    {
+      "id": "1414",
+      "title": "31312",
+      "text": "31321312"
+    },
+    {
+      "id": "4438",
+      "title": "31312",
+      "text": "132132131231"
     }
   ]
 }

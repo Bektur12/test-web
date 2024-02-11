@@ -27,8 +27,8 @@ export const BlogViewPage = () => {
 		methods.setValue('title', blog.title)
 	}
 
-	const handleDeleteClick = () => {
-		dispatch(deleteBlogRequest({ id: id as string })).then(() => {
+	const handleDeleteClick = async () => {
+		await dispatch(deleteBlogRequest({ id: id as string })).then(() => {
 			navigate('/blogs')
 			notify({ title: 'Успешно удален', type: 'success' })
 		})
@@ -54,7 +54,7 @@ export const BlogViewPage = () => {
 					<>
 						<TopPart>
 							<h3>Title: {blog?.title}</h3>
-							<p> Text: {blog?.text}</p>
+							<p> Description: {blog?.text}</p>
 						</TopPart>
 						<BottomPart>
 							<Button onClick={handleEditButtonClick}>
@@ -89,4 +89,5 @@ const TopPart = styled('div')({
 	display: 'flex',
 	flexDirection: 'column',
 	gap: '10px',
+	fontFamily: 'Inter',
 })

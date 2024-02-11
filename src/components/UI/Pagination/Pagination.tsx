@@ -3,24 +3,28 @@ import RcPagination from 'rc-pagination'
 import 'rc-pagination/assets/index.css'
 
 type PaginationProps = {
-	handleNextPage: (event: number) => void
+	handleNextPage: (page: number) => void
+	handleSizeChange: (size: number) => void
 	page: number
 	total: number
+	pageSize: number
 }
 export const Pagination = ({
 	handleNextPage,
+	handleSizeChange,
 	page,
 	total,
+	pageSize,
 }: PaginationProps) => {
-	console.log(total, 'hello total')
-
 	return (
 		<ContainerPagination>
 			<RcPagination
-				pageSize={page}
+				pageSize={pageSize}
 				onChange={handleNextPage}
-				current={total}
+				current={page}
 				total={total}
+				showSizeChanger
+				onShowSizeChange={handleSizeChange}
 			/>
 		</ContainerPagination>
 	)

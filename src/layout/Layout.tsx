@@ -24,6 +24,6 @@ const Main = styled('main')({
 	width: '100%',
 	height: '100%',
 	maxHeight: '100vh',
-	paddingTop: '90px',
+	padding: '80px 0px 60px 0px',
 	overflow: 'scroll',
 })

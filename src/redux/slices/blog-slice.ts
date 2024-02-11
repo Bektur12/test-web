@@ -13,6 +13,7 @@ const initialState: InitialState = {
 		prev: null,
 	},
 	isLoading: false,
+	isError: false,
 }
 const blogsSlice = createSlice({
 	name: 'blogsSlice',
@@ -26,6 +27,9 @@ const blogsSlice = createSlice({
 			})
 			.addCase(getBlogs.pending, (state) => {
 				state.isLoading = true
+			})
+			.addCase(getBlogs.rejected, (state) => {
+				state.isError = true
 			})
 	},
 })

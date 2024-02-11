@@ -6,7 +6,7 @@ import blogsSlice from './slices/blog-slice'
 import counterSlice from './slices/counter-slice'
 import postsSlice from './slices/post-slice'
 
-const persistConfig = { key: 'root', storage }
+const persistConfig = { key: 'root', storage, whitelist: ['auth'] }
 
 const rootReducer = combineReducers({
 	auth: authReducer,
