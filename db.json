@@ -1,145 +1,101 @@
 {
-  "users": [
-    {
-      "email": "",
-      "id": "b11a"
-    },
-    {
-      "id": "0.1067847086716378",
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "random"
-    },
-    {
-      "id": "1",
-      "email": "dispatcher@bektur.com",
-      "password": "random"
-    },
-    {
-      "id": "4106",
-      "email": "kanybekovbekfdsafdsafdastur22@gmail.com",
-      "password": "fdsafdsafdsa"
-    },
-    {
-      "id": "126b",
-      "email": "manager321312132@loadex.net",
-      "password": "321312312132123"
-    },
-    {
-      "id": "c969",
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "random"
-    },
-    {
-      "id": "61a0",
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "random"
-    },
-    {
-      "id": "0831",
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "random"
-    },
-    {
-      "id": "ff37",
-      "email": "fdsafdsadfsa@gmail.com",
-      "password": "321312123"
-    },
-    {
-      "id": "e890",
-      "email": "kanybekovbektur22@gmail.com",
-      "password": "fdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsa"
-    }
-  ],
-  "blogs": [
-    {
-      "id": "a9ec",
-      "text": "1321321321312авыфавыфавыф",
-      "title": "312132"
-    },
-    {
-      "id": "9261",
-      "title": "321312312",
-      "text": "321312312321123"
-    },
-    {
-      "id": "2389",
-      "title": "132312",
-      "text": "32113213223123123123"
-    },
-    {
-      "id": "86b1",
-      "title": "32312321",
-      "text": "231312321"
-    },
-    {
-      "id": "14ed",
-      "title": "321312",
-      "text": "321312321132"
-    },
-    {
-      "id": "fb3e",
-      "title": "312321",
-      "text": "132123123"
-    },
-    {
-      "id": "ed77",
-      "title": "321123",
-      "text": "123123123123"
-    },
-    {
-      "id": "0443",
-      "title": "312312",
-      "text": "312312"
-    },
-    {
-      "id": "3f15",
-      "title": "312312",
-      "text": "312312132"
-    },
-    {
-      "id": "877f",
-      "title": "312132",
-      "text": "31213212"
-    },
-    {
-      "id": "4836",
-      "title": "312312312",
-      "text": "31321312312"
-    },
-    {
-      "id": "bc2a",
-      "title": "321312312",
-      "text": "312132132132"
-    },
-    {
-      "id": "dd0a",
-      "title": "3213123123",
-      "text": "12312312312132"
-    },
-    {
-      "id": "4e5f",
-      "title": "3213123213",
-      "text": "21321321312"
-    },
-    {
-      "id": "a31f",
-      "title": "321321312",
-      "text": "32131232131"
-    },
-    {
-      "id": "2897",
-      "title": "321321312312",
-      "text": "312312132132321132"
-    },
-    {
-      "id": "1414",
-      "title": "31312",
-      "text": "31321312"
-    },
-    {
-      "id": "4438",
-      "title": "31312",
-      "text": "132132131231"
-    }
-  ]
+	"users": [
+		{
+			"id": "0.1067847086716378",
+			"email": "kanybekovbektur22@gmail.com",
+			"password": "random"
+		}
+	],
+	"blogs": [
+		{
+			"id": "a9ec",
+			"text": "1321321321312авыфавыфавыф",
+			"title": "312132"
+		},
+		{
+			"id": "9261",
+			"title": "321312312",
+			"text": "321312312321123"
+		},
+		{
+			"id": "2389",
+			"title": "132312",
+			"text": "32113213223123123123"
+		},
+		{
+			"id": "86b1",
+			"title": "32312321",
+			"text": "231312321"
+		},
+		{
+			"id": "14ed",
+			"title": "321312",
+			"text": "321312321132"
+		},
+		{
+			"id": "fb3e",
+			"title": "312321",
+			"text": "132123123"
+		},
+		{
+			"id": "ed77",
+			"title": "321123",
+			"text": "123123123123"
+		},
+		{
+			"id": "0443",
+			"title": "312312",
+			"text": "312312"
+		},
+		{
+			"id": "3f15",
+			"title": "312312",
+			"text": "312312132"
+		},
+		{
+			"id": "877f",
+			"title": "312132",
+			"text": "31213212"
+		},
+		{
+			"id": "4836",
+			"title": "312312312",
+			"text": "31321312312"
+		},
+		{
+			"id": "bc2a",
+			"title": "321312312",
+			"text": "312132132132"
+		},
+		{
+			"id": "dd0a",
+			"title": "3213123123",
+			"text": "12312312312132"
+		},
+		{
+			"id": "4e5f",
+			"title": "3213123213",
+			"text": "21321321312"
+		},
+		{
+			"id": "a31f",
+			"title": "321321312",
+			"text": "32131232131"
+		},
+		{
+			"id": "2897",
+			"title": "321321312312",
+			"text": "312312132132321132"
+		},
+		{
+			"id": "1414",
+			"title": "31312",
+			"text": "31321312"
+		},
+		{
+			"id": "4438",
+			"title": "31312",
+			"text": "132132131231"
+		}
+	]
 }
