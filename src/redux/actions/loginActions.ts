@@ -2,6 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { instance } from '../axiosInstanse'
 import { LoginUserProps } from '../../types/types'
 import { authActions } from '../slices/auth-slice'
+import { AxiosError } from 'axios'
 
 export const loginUser = createAsyncThunk(
 	'users/LoginUser',
@@ -11,8 +12,9 @@ export const loginUser = createAsyncThunk(
 			dispatch(authActions.setCredentials())
 			navigate('/blogs')
 			return response
-		} catch (error) {
-			// throw new Error(error)j
+		} catch (err) {
+			const error = err as AxiosError<Error>
+			throw new Error(error.response?.data.message)
 		}
 	},
 )
