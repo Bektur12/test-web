@@ -58,7 +58,7 @@ export type DeleteBlog = {
 }
 
 export type LoginUserProps = Navigate & {
-	data: Omit<IUserInfo, 'id'>
+	data: IUserInfo
 }
 
 export type Params = {
