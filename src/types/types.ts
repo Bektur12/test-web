@@ -21,6 +21,11 @@ export interface IUserInfo {
 	id: string
 }
 
+export type Login = {
+	email: string
+	password: string
+}
+
 export type BlogItem = {
 	id: string
 	title: string
@@ -58,7 +63,7 @@ export type DeleteBlog = {
 }
 
 export type LoginUserProps = Navigate & {
-	data: IUserInfo
+	data: Login
 }
 
 export type Params = {
