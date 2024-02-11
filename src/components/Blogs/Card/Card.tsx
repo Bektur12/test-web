@@ -12,10 +12,10 @@ export const Card = (props: CardProps) => {
 	const navigate = useNavigate()
 	return (
 		<CardWrapper>
-			<div>
-				<h3>{title}</h3>
-				<p>{text}</p>
-			</div>
+			<InnerContainer>
+				<h3>Title: {title}</h3>
+				<p>Description: {text}</p>
+			</InnerContainer>
 			<span onClick={() => navigate(`/blogs/${id}/view`)}>
 				Подробнее просмотреть
 			</span>
@@ -49,4 +49,10 @@ const CardWrapper = styled('div')({
 		textAlign: 'end',
 		fontSize: '11px',
 	},
+})
+
+const InnerContainer = styled('div')({
+	display: 'flex',
+	flexDirection: 'column',
+	gap: '50px',
 })

@@ -1,3 +1,4 @@
+import { Navigate } from 'react-router'
 import { BlogPage } from '../../pages/BlogPage'
 import { BlogViewPage } from '../../pages/BlogViewPage'
 import Counter from '../../pages/CounterPage'
@@ -12,6 +13,10 @@ export const ROUTES = {
 
 export const routesConfig: Record<string, RouteConfig[]> = {
 	USER: [
+		{
+			path: '/',
+			component: <Navigate to={'/blogs'} />,
+		},
 		{
 			path: '/posts',
 			component: <PostPage />,

@@ -12,11 +12,13 @@ import { userExists } from '../../../utils/helpers/checkResponse'
 import { loginUser } from '../../../redux/actions/loginActions'
 import { useNavigate } from 'react-router'
 import { instance } from '../../../redux/axiosInstanse'
+import { useSnackBar } from '../../../hooks/useSnackBar'
 
 type FormProps = {
 	email: string
 	password: string
 }
+
 export const Form = () => {
 	const {
 		register,
@@ -26,17 +28,18 @@ export const Form = () => {
 
 	const dispatch = useAppDispatch()
 	const navigate = useNavigate()
+	const { notify } = useSnackBar()
 
 	const onSubmit = async (data: FormProps) => {
 		try {
 			const response = await instance.get(`users`)
-			if (userExists(response.data, data.email)) {
-				dispatch(authActions.setCredentials(data))
+			if (userExists(response.data, data)) {
+				dispatch(authActions.setCredentials())
 			} else {
 				dispatch(loginUser({ data, navigate }))
 			}
 		} catch (error) {
-			throw new Error('Что-то пошло не так')
+			notify({ title: 'Что-то пошло не так', type: 'error' })
 		}
 	}
 

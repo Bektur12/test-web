@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { styled } from '@mui/material/styles'
 import { BlogList } from '../components/Blogs/BlogList'
 import { Pagination } from '../components/UI/Pagination/Pagination'
@@ -10,28 +9,36 @@ import { getBlogs } from '../redux/actions/blogActions'
 import { SpinnerContainer } from '../components/UI/Spinner/SpinnerContainer'
 import { Spinner } from '../components/UI/Spinner/Spinner'
 import { queryParamsFormat } from '../utils/helpers/queryParams.helper'
+import { Error } from '../components/Error/Error'
 
 export const BlogPage = () => {
-	const { blogs, isLoading } = useAppSelector((state) => state.blogs)
+	const { blogs, isLoading, isError } = useAppSelector((state) => state.blogs)
 	const [params, setParams] = useSearchParams()
 
 	const dispatch = useAppDispatch()
 	const navigate = useNavigate()
-	const newPages = parseInt(params.get('page') || '1')
+
+	const currentPage = parseInt(params.get('page') || '1')
+	const size = parseInt(params.get('size') || '10')
 
 	const handleClickNavigate = () => navigate('/blogs/create')
-	const query = {
-		page: newPages,
-		per_page: '10',
-	}
-	useEffect(() => {
-		dispatch(getBlogs({ params: queryParamsFormat(query as any) }))
-	}, [dispatch, newPages])
+
+	const query = { page: currentPage.toString(), per_page: size.toString() }
 
 	const handleNextPage = (newPage: number) => {
-		if (newPage !== newPages) {
-			setParams({ page: String(newPage) })
-		}
+		setParams({ page: String(newPage) })
+	}
+
+	const handleSizeChange = (newSize: number) => {
+		setParams({ size: String(newSize) })
+	}
+
+	useEffect(() => {
+		dispatch(getBlogs({ params: queryParamsFormat(query) }))
+	}, [dispatch, currentPage])
+
+	if (isError) {
+		return <Error />
 	}
 
 	return (
@@ -49,9 +56,11 @@ export const BlogPage = () => {
 				)}
 			</InnerContainer>
 			<Pagination
+				handleSizeChange={handleSizeChange}
+				pageSize={size}
 				handleNextPage={handleNextPage}
-				page={newPages}
-				total={blogs.pages}
+				page={currentPage}
+				total={blogs.items}
 			/>
 		</BlogsWrapper>
 	)

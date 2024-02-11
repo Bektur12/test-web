@@ -43,6 +43,7 @@ export type IsLoading = {
 
 export type InitialState = IsLoading & {
 	blogs: Data
+	isError: boolean
 }
 
 type Navigate = {
@@ -75,4 +76,5 @@ export type Posts = { posts: PostItem[] }
 
 export type InitialStatePosts = IsLoading & {
 	posts: PostItem[]
+	isError: boolean
 }

@@ -5,19 +5,11 @@ import { useAppSelector } from '../hooks'
 
 const Counter = () => {
 	const count = useAppSelector((state) => state.counter.count)
-
 	const dispatch = useDispatch()
 
-	const handleIncrement = () => {
-		dispatch(increment())
-	}
-
-	const handleReset = () => {
-		dispatch(reset())
-	}
-	const handleDecrement = () => {
-		dispatch(decrement())
-	}
+	const handleIncrement = () => dispatch(increment())
+	const handleReset = () => dispatch(reset())
+	const handleDecrement = () => dispatch(decrement())
 
 	return (
 		<Container>
