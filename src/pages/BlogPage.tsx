@@ -11,7 +11,7 @@ import { Spinner } from '../components/UI/Spinner/Spinner'
 import { queryParamsFormat } from '../utils/helpers/queryParams.helper'
 import { Error } from '../components/Error/Error'
 
-export const BlogPage = () => {
+const BlogPage = () => {
 	const { blogs, isLoading, isError } = useAppSelector((state) => state.blogs)
 	const [params, setParams] = useSearchParams()
 
@@ -65,6 +65,8 @@ export const BlogPage = () => {
 		</BlogsWrapper>
 	)
 }
+
+export default BlogPage
 
 const BlogsWrapper = styled('div')({
 	display: 'flex',

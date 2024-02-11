@@ -5,8 +5,14 @@ import { PrivateAuthRoute } from './PrivateAuthRole'
 import { Layout } from '../layout/Layout'
 import { Authorized } from '../types/types'
 import { Login } from '../pages/Login'
+import { SpinnerContainer } from '../components/UI/Spinner/SpinnerContainer'
+import { Spinner } from '../components/UI/Spinner/Spinner'
 
-const Loading = 'Loading...'
+const Fallback = (
+	<SpinnerContainer>
+		<Spinner />
+	</SpinnerContainer>
+)
 
 export const AppRoutes = ({ isAuthorized }: Authorized) => {
 	return (
@@ -15,7 +21,7 @@ export const AppRoutes = ({ isAuthorized }: Authorized) => {
 				index
 				path={ROUTES.LOGIN}
 				element={
-					<Suspense fallback={<div>{Loading}</div>}>
+					<Suspense fallback={Fallback}>
 						<PrivateAuthRoute
 							isAuthorized={!isAuthorized}
 							RouteComponent={<Login />}
@@ -27,7 +33,7 @@ export const AppRoutes = ({ isAuthorized }: Authorized) => {
 			<Route
 				path={'/*'}
 				element={
-					<Suspense fallback={<div>{Loading}</div>}>
+					<Suspense fallback={Fallback}>
 						<PrivateAuthRoute
 							isAuthorized={isAuthorized}
 							RouteComponent={<Layout />}

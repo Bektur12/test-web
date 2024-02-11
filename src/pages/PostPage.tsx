@@ -7,7 +7,7 @@ import { getPosts } from '../redux/actions/postActions'
 import { styled } from '@mui/material/styles'
 import { Error } from '../components/Error/Error'
 
-export const PostPage = () => {
+const PostPage = () => {
 	const { posts, isLoading, isError } = useAppSelector((state) => state.posts)
 
 	const dispatch = useAppDispatch()
@@ -32,6 +32,8 @@ export const PostPage = () => {
 		</Wrapper>
 	)
 }
+
+export default PostPage
 
 const Wrapper = styled('div')({
 	display: 'flex',

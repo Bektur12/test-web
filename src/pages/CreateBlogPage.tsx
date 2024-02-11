@@ -11,7 +11,7 @@ type Form = {
 	title: string
 	text: string
 }
-export const CreateBlogPage = () => {
+const CreateBlogPage = () => {
 	const methods = useForm<Form>()
 
 	const { notify } = useSnackBar()
@@ -32,6 +32,7 @@ export const CreateBlogPage = () => {
 	)
 }
 
+export default CreateBlogPage
 const Wrapper = styled('form')({
 	display: 'flex',
 	alignItems: 'center',

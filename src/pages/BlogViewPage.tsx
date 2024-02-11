@@ -10,7 +10,7 @@ import { EditForm } from '../components/Blogs/Form/EditForm'
 import { useSnackBar } from '../hooks/useSnackBar'
 import { BLOGS_DEFAULT_VALUES } from '../utils/constants/general'
 
-export const BlogViewPage = () => {
+const BlogViewPage = () => {
 	const methods = useForm<BlogItem>()
 	const { id } = useParams()
 
@@ -68,6 +68,8 @@ export const BlogViewPage = () => {
 		</FormProvider>
 	)
 }
+
+export default BlogViewPage
 
 const Container = styled('div')({
 	display: 'flex',

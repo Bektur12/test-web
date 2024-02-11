@@ -1,10 +1,12 @@
-import { Navigate } from 'react-router'
-import { BlogPage } from '../../pages/BlogPage'
-import { BlogViewPage } from '../../pages/BlogViewPage'
-import Counter from '../../pages/CounterPage'
-import { CreateBlogPage } from '../../pages/CreateBlogPage'
-import { PostPage } from '../../pages/PostPage'
+/* eslint-disable react-refresh/only-export-components */
+import { lazy } from 'react'
 import { RouteConfig } from '../../types/types'
+import { Navigate } from 'react-router'
+export const BlogViewPage = lazy(() => import('../../pages/BlogViewPage'))
+export const CounterPage = lazy(() => import('../../pages/CounterPage'))
+export const CreateBlogPage = lazy(() => import('../../pages/CreateBlogPage'))
+export const BlogPage = lazy(() => import('../../pages/BlogPage'))
+export const PostPage = lazy(() => import('../../pages/PostPage'))
 
 export const ROUTES = {
 	LOGIN: '/login',
@@ -23,7 +25,7 @@ export const routesConfig: Record<string, RouteConfig[]> = {
 		},
 		{
 			path: '/counter',
-			component: <Counter />,
+			component: <CounterPage />,
 		},
 		{
 			path: '/blogs',
